@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>costumer_CPF</fullName>
+    <active>true</active>
+    <description>CPF required for the client to make a quote</description>
+    <errorConditionFormula>ISBLANK( Customer__r.CPF__c )</errorConditionFormula>
+    <errorMessage>The client must have a CPF to request a quote.</errorMessage>
+</ValidationRule>
