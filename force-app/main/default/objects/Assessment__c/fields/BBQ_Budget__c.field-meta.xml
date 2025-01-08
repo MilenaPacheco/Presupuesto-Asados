@@ -3,7 +3,6 @@
     <fullName>BBQ_Budget__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Field of relationship with the object Roasted Budget</description>
-    <externalId>false</externalId>
     <label>BBQ Budget</label>
     <referenceTo>BBQ_Budget__c</referenceTo>
     <relationshipLabel>Assessments</relationshipLabel>

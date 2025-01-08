@@ -3,7 +3,6 @@
     <fullName>Product__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <description>Relationship to a product or service included in the budget item.</description>
-    <externalId>false</externalId>
     <label>Product</label>
     <referenceTo>Product2</referenceTo>
     <relationshipLabel>BBQ Budgets Items</relationshipLabel>

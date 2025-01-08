@@ -1,0 +1,24 @@
+<template>
+    <template if:true={showComponent}>
+        <lightning-card title="BBQ Assessment">
+            <div class="group-assesment">
+                <lightning-input 
+                label="Score (1-10)"
+                value={score}
+                type="number"
+                onchange={handleScoreChange}>
+                </lightning-input>
+                <lightning-textarea
+                label="Observations"
+                value={observations}
+                onchange={handleObservationsChange}>
+                </lightning-textarea>
+                <lightning-button
+                label="Save Assessment"
+                variant="brand"
+                onclick={handleSave}>
+                </lightning-button>
+            </div>
+        </lightning-card>
+    </template>
+</template>

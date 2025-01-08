@@ -3,7 +3,6 @@
     <fullName>Amount__c</fullName>
     <defaultValue>0</defaultValue>
     <description>Currency field representing the value of the item.</description>
-    <externalId>false</externalId>
     <label>Amount</label>
     <precision>18</precision>
     <required>false</required>
