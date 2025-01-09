@@ -8,5 +8,6 @@
         <target>lightning__AppPage</target> <!-- Páginas de aplicación -->
         <target>lightning__HomePage</target> <!-- Páginas de inicio -->
         <target>lightning__RecordAction</target>
+        <target>lightning__FlowScreen</target>
     </targets>
 </LightningComponentBundle>
