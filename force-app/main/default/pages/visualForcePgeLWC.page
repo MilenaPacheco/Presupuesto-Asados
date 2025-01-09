@@ -1,0 +1,16 @@
+<apex:page standardStylesheets="false" sidebar="false" lightningStylesheets="true" contentType="text/html" standardController="Assessment__c" >
+<apex:includeLightning />
+<div id="lightning"> </div>
+<script>
+    $Lightning.use(
+        "c:testAura",
+        function() {
+            $Lightning.createComponent(
+                "c:evaluationComponent",
+                {recordId : '{!$CurrentPage.parameters.id}'},
+                "lightning"
+            );
+        }
+    );
+</script>
+</apex:page>

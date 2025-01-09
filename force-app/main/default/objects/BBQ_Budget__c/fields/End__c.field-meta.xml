@@ -3,7 +3,7 @@
     <fullName>End__c</fullName>
     <description>Time field representing the date of the roast budget</description>
     <label>End</label>
-    <required>false</required>
+    <required>true</required>
     <trackTrending>false</trackTrending>
     <type>DateTime</type>
 </CustomField>
