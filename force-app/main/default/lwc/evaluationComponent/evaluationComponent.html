@@ -1,22 +1,30 @@
 <template>
+    <!-- Mostrar mensaje si ya existe una evaluación -->
+    <template if:true={assessmentExists}>
+        <lightning-card title="BBQ Assessment">
+            <p class="message">An assessment has already been assigned for this BBQ.</p>
+        </lightning-card>
+    </template>
+
+    <!-- Mostrar el formulario si no existe evaluación y el componente está visible -->
     <template if:true={showComponent}>
         <lightning-card title="BBQ Assessment">
             <div class="group-assesment">
                 <lightning-input 
-                label="Score (1-10)"
-                value={score}
-                type="number"
-                onchange={handleScoreChange}>
+                    label="Score (1-10)"
+                    value={score}
+                    type="number"
+                    onchange={handleScoreChange}>
                 </lightning-input>
                 <lightning-textarea
-                label="Observations"
-                value={observations}
-                onchange={handleObservationsChange}>
+                    label="Observations"
+                    value={observations}
+                    onchange={handleObservationsChange}>
                 </lightning-textarea>
                 <lightning-button
-                label="Save Assessment"
-                variant="brand"
-                onclick={handleSave}>
+                    label="Save Assessment"
+                    variant="brand"
+                    onclick={handleSave}>
                 </lightning-button>
             </div>
         </lightning-card>

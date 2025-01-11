@@ -4,9 +4,9 @@
     <isExposed>true</isExposed>
     <targets>
         <!-- estará disponible el componente -->
-        <target>lightning__RecordPage</target> <!-- Páginas de registro -->
-        <target>lightning__AppPage</target> <!-- Páginas de aplicación -->
-        <target>lightning__HomePage</target> <!-- Páginas de inicio -->
+        <target>lightning__RecordPage</target> 
+        <target>lightning__AppPage</target> 
+        <target>lightning__HomePage</target> 
         <target>lightning__RecordAction</target>
         <target>lightning__FlowScreen</target>
     </targets>
