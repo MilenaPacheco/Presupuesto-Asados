@@ -1,0 +1,25 @@
+<template>
+    <div class="main-container">
+        <lightning-card title="Welcome to BBQ Budget Dashboard">
+            <div class="description-container">
+                <p class="description">
+                    Welcome to the BBQ Budget app! Our platform helps you organize and manage your BBQ event budgets easily and efficiently.
+                </p>
+                <p class="description">
+                    Here you can manage budgets, products and services, as well as track the status of each project. Use the shortcuts below to start exploring.
+                </p>
+            </div>
+
+            <div class="image-container">
+                <img src={BBQ_Logo} alt="BBQ Logo" class="bbq-logo" />
+                <img src="https://www.freepik.es/vector-gratis/plantilla-logotipo-barbacoa-detalles_15519511.htm#fromView=search&page=1&position=1&uuid=ccbde7d3-4287-44e0-b69b-6d66ef92870e&new_detail=true" alt="BBQ Budget Overview">
+            </div>
+
+            <div class="button-container">
+                <button class="custom-button" onclick={handleCreateBudget}>Create Budget</button>
+                <button class="custom-button" onclick={handleNewProduct}>New Product</button>
+                <button class="custom-button" onclick={handleNewCustomer}>New Customer</button>
+            </div>
+        </lightning-card>
+    </div>
+</template>
