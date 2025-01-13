@@ -8,6 +8,7 @@
     <relationshipLabel>Assessments</relationshipLabel>
     <relationshipName>Assessments</relationshipName>
     <required>false</required>
+    <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Lookup</type>
 </CustomField>

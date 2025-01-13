@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_Read_Mount</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCHANGED(Amount__c)</errorConditionFormula>
+    <errorDisplayField>Amount__c</errorDisplayField>
+    <errorMessage>This field is read-only</errorMessage>
+</ValidationRule>

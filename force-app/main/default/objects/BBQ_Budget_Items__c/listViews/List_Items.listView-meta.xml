@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ListView xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>BBQ_Items</fullName>
+    <fullName>List_Items</fullName>
     <columns>NAME</columns>
-    <columns>Product__c</columns>
+    <columns>Record_Type_Product__c</columns>
+    <columns>Quantity__c</columns>
     <columns>BBQ_Budget__c</columns>
     <columns>Amount__c</columns>
-    <columns>Quantity__c</columns>
-    <columns>CREATED_DATE</columns>
     <filterScope>Mine</filterScope>
-    <label>BBQ Items</label>
+    <label>List Items</label>
 </ListView>

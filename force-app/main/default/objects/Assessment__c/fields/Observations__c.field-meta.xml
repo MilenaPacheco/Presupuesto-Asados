@@ -4,6 +4,7 @@
     <description>Text area field representing comments on the grade given.</description>
     <label>Observations</label>
     <length>400</length>
+    <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>LongTextArea</type>
     <visibleLines>3</visibleLines>

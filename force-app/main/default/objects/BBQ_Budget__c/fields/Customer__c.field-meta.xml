@@ -7,6 +7,7 @@
     <relationshipLabel>BBQ Budgets</relationshipLabel>
     <relationshipName>BBQ_Budgets</relationshipName>
     <required>true</required>
+    <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Lookup</type>
 </CustomField>

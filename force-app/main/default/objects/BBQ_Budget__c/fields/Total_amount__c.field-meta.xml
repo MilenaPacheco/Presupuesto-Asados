@@ -6,6 +6,7 @@
     <summarizedField>BBQ_Budget_Items__c.Amount__c</summarizedField>
     <summaryForeignKey>BBQ_Budget_Items__c.BBQ_Budget__c</summaryForeignKey>
     <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Summary</type>
 </CustomField>

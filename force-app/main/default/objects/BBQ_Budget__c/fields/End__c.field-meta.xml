@@ -4,6 +4,7 @@
     <description>Time field representing the date of the roast budget</description>
     <label>End</label>
     <required>true</required>
+    <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>DateTime</type>
 </CustomField>

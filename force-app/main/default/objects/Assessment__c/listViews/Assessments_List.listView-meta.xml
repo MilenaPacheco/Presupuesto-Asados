@@ -3,10 +3,10 @@
     <fullName>Assessments_List</fullName>
     <columns>NAME</columns>
     <columns>BBQ_Budget__c</columns>
-    <columns>CREATED_DATE</columns>
     <columns>Score__c</columns>
     <columns>Observations__c</columns>
     <columns>OWNER.FIRST_NAME</columns>
+    <columns>CREATED_DATE</columns>
     <filterScope>Mine</filterScope>
     <label>Assessments List</label>
 </ListView>
