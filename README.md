@@ -45,7 +45,7 @@ La aplicación utiliza los siguientes objetos y relaciones:
 - **Precio Unitario:** UnitPrice (Currency)
 
 ### Diagrama de Relaciones
-![Diagrama de Relaciones](.images/SchemaBuilder.jpeg)
+![Diagrama de Relaciones](images/SchemaBuilder.jpeg)
 
 ## Requerimientos
 
