@@ -45,7 +45,7 @@ La aplicación utiliza los siguientes objetos y relaciones:
 - **Precio Unitario:** UnitPrice (Currency)
 
 ### Diagrama de Relaciones
-![Diagrama de Relaciones](./images/diagram.png)
+![Diagrama de Relaciones](images/SchemaBuilder.jpeg)
 
 ## Requerimientos
 
@@ -162,8 +162,6 @@ git push origin feature/nueva-feature
 ```
 5. Crea un Pull Request.
 
-## Licencia
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](./LICENSE) para más detalles.
 
 
