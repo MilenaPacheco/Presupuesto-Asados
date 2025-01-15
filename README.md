@@ -1,4 +1,5 @@
 # Presupuesto Asados
+![Vista Principals](images/Home.jpeg)
 
 ## Descripción General
 
@@ -118,15 +119,92 @@ sfdx force:data:tree:import -f data/sample-data.json
 
 - **Reporte de Productos más Vendidos:**
   - Descripción: Muestra los productos más solicitados agrupados por tipo.
-  - ![Productos Más Vendidos](./images/productos_mas_vendidos.png)
+  - ![Productos Más Vendidos](images/Selling.jpeg)
+  - ![Productos Más Vendidos](images/Selling2.jpeg)
 
 - **Reporte de Calificaciones Promedio:**
   - Descripción: Permite analizar las calificaciones asignadas a los eventos.
-  - ![Calificaciones Promedio](./images/calificaciones_promedio.png)
+  - ![Calificaciones Promedio](images/Assessment.jpeg)
+  - ![Calificaciones Promedio](images/Assessment2.jpeg)
 
 - **Dashboard de Eventos por Día:**
   - Descripción: Visualiza los eventos programados por fecha y el monto asociado.
-  - ![Dashboard Eventos](./images/eventos_por_dia.png)
+  - ![Dashboard Eventos](images/Events2.jpeg)
+  - ![Dashboard Eventos](./images/Events%20per%20Day.png)
+
+## Flujo de Pantallas
+
+La aplicación BBQ Budget está diseñada con una navegación clara y eficiente que guía al usuario a través de las principales funcionalidades:
+
+1. **Dashboard Principal**
+   - Vista general del sistema con botones de acceso rápido para crear presupuestos, productos y clientes.
+   - **Imagen:**  
+![Vista Principals](images/Home.jpeg)
+
+2. **Creación de Presupuesto**
+   - Formulario para ingresar información clave del presupuesto, como cliente, fechas y artículos.
+   - **Validaciones:**  
+     - No se permite guardar sin cliente o fechas.
+     - Solo productos activos pueden ser seleccionados.
+
+3. **Evaluación de Eventos**
+   - Pantalla para calificar el asado una vez completado.
+   - **Restricciones:**  
+     - Solo aparece cuando el presupuesto está en estado "Completado".
+
+4. **Dashboards y Reportes**
+   - Reportes dinámicos para analizar métricas clave, como productos más vendidos, ingresos diarios y evaluaciones promedio.
+
+#### **Diagrama del Flujo**
+```plaintext
+[Dashboard Principal] --> [Crear Presupuesto] --> [Agregar Ítems]
+      |                              |
+      v                              v
+[Evaluar Evento]               [Flujo de Aprobación]
+```
+
+## Procesos
+
+1. **Desarrollar el Componente de Evaluación del Asado (LWC):**
+   - Crear un Lightning Web Component que permita puntuar y agregar observaciones para los presupuestos de asado.
+   - El componente solo aparecerá cuando el estado del presupuesto sea "Completado".
+   - Configurar para guardar un registro en el objeto Evaluación.
+
+2. **Automatizar el Proceso de Cancelación de Presupuestos No Realizados:**
+   - Implementar un Apex Scheduler/Batch que cancele automáticamente los presupuestos no realizados después de su fecha prevista.
+
+3. **Configurar Flujos de Pantalla de Aprobación para Presupuestos:**
+   - Crear un flujo para presupuestos que contengan artículos de servicio, enviándolos para aprobación.
+   - Para presupuestos sin artículos de servicio, configurar una actualización automática del estado a "Programado".
+
+4. **Completar Automáticamente el Campo Valor en Presupuesto:**
+   - Crear un custom metadata para la tabla de precios de servicios (con parrillero, limpieza y mesero, incluyendo sus valores por hora).
+   - Desarrollar un Apex Trigger para calcular automáticamente el valor de los artículos según:
+     - Tipo de producto o servicio.
+     - Cantidad, duración del evento, y la tabla de precios.
+
+5. **Validar Artículos Duplicados:**
+   - Implementar un Apex Trigger que valide si ya existe un artículo con el mismo producto en el presupuesto de asado.
+   - Mostrar un mensaje de error en caso de duplicados.
+
+6. **Optimizar las Vistas de Lista:**
+   - Agregar campos adicionales necesarios, como cliente, propietario, estado, valor total, y cantidad de productos/servicios, según lo discutido.
+   - Configurar filtros adecuados para destacar presupuestos recientes o específicos.
+
+7. **Elaborar Informes y Tableros de Control:**
+   - Crear reportes clave para analizar los KPI del proyecto, como presupuestos aprobados, ingresos totales, productos más utilizados, etc.
+   - Configurar un dashboard Lightning para visualización centralizada de datos.
+
+8. **Asegurar la Cobertura de Pruebas:**
+   - Crear clases de prueba en Apex para cubrir al menos el 75% de todas las funcionalidades desarrolladas.
+   - Incluir casos de prueba para el Trigger, Batch, y flujos.
+
+9. **Validar Reglas Empresariales:**
+   - Revisar que las reglas empresariales definidas, como evitar presupuestos sin CPF o productos no activos, estén correctamente implementadas y funcionando.
+
+10. **Mejorar Diseño de Páginas Lightning:**
+   - Reorganizar componentes en las páginas Lightning para que sean más intuitivas y agradables visualmente.
+   - Aplicar bordes, centrado y estilos visuales según las necesidades.
 
 ## Uso
 
@@ -161,7 +239,3 @@ git commit -m "Agrega nueva funcionalidad"
 git push origin feature/nueva-feature
 ```
 5. Crea un Pull Request.
-
-
-
-
